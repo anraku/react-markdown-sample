@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock'
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 
@@ -16,7 +17,7 @@ function App() {
       </div>
       <div css={{
       }}>
-        <ReactMarkdown source={text}></ReactMarkdown>
+        <ReactMarkdown source={text} renderers={{ code: CodeBlock }}></ReactMarkdown>
       </div>
     </div>
   );
